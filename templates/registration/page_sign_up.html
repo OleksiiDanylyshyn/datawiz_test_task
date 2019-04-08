@@ -1,0 +1,64 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block main %}
+    <!-- form register -->
+    <form class="text-center p-5" action="{% url 'user_create' %}" method="post" id="sign-up-form">
+        {% csrf_token %}
+
+        <p class="h4 mb-4">Sign up</p>
+
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div{% if message.tags %} class="{{ message.tags }}"{% endif %}><h3>{{ message }}</h3></div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <br>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" id="RegisterFormFirstName" class="form-control" placeholder="* First name"
+                       name="first_name">
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <input type="text" id="RegisterFormLastName" class="form-control" placeholder="* Last name"
+                       name="last_name">
+            </div>
+        </div>
+
+        <!-- E-mail -->
+        <input type="email" id="RegisterFormEmail" class="form-control" placeholder="* E-mail" name="email">
+
+        <!-- Password -->
+
+        <div class="form-row mb-2 mt-4">
+            <div class="col">
+                <!-- Password-->
+                <input type="password" id="RegisterFormPassword" class="form-control" placeholder="* Password"
+                       name="password">
+            </div>
+            <div class="col">
+                <!-- Confirm password -->
+                <input type="password" id="RegisterFormConfirmPassword" class="form-control"
+                       placeholder="* Confirm Password" name="confirm_password">
+            </div>
+        </div>
+        <small id="RegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            At least 4 characters and 1 digit
+        </small>
+
+
+        <!-- Sign up submit -->
+        <button class="btn btn-outline-success my-4 btn-block" type="submit">Sign up</button>
+
+
+    </form>
+    <!-- Default form register -->
+{% endblock %}
+
+{% block extrajs %}
+    <script src="{% static 'js/sign-up-validation.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block main %}
+    <br>
+    <table id="products_decrease_table" class="table">
+        <thead>
+        <tr>
+            <th>Назва товару</th>
+            <th>Зміна кількості продаж</th>
+            <th>Зміна обороту</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+
+    </table>
+    <div class="container">
+        <ul class="pagination justify-content-end" id="products_decrease_pagination">
+        </ul>
+    </div>
+{% endblock %}
+
+{% block extrajs %}
+        <script src="{% static 'js/products_decrease.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block main %}
+    <br>
+    <table id="table" class="table">
+        <tr>
+            <th>Показник</th>
+            <th>{{ data.date_from }}</th>
+            <th>{{ data.date_to }}</th>
+            <th>Різниця в %</th>
+            <th>Різниця</th>
+        </tr>
+
+        <tr>
+            <td>Оборот</td>
+            {% for i in data.turnover %}
+                <td>{{ i }}</td>
+            {% endfor %}
+            <td>{{ data.turnover_dif_percent }}</td>
+            <td>{{ data.turnover_dif }}</td>
+        </tr>
+        <tr>
+            <td>Кількість товарів</td>
+            {% for item in data.qty %}
+                <td>{{ item }}</td>
+            {% endfor %}
+            <td>{{ data.qty_diff_percent }}</td>
+            <td>{{ data.qty_diff }}</td>
+        </tr>
+        <tr>
+            <td>Кількість чеків</td>
+            {% for item in data.receipts_qty %}
+                <td>{{ item }}</td>
+            {% endfor %}
+            <td>{{ data.receipts_qty_percent }}</td>
+            <td>{{ data.receipts_qty_diff }}</td>
+        </tr>
+        <tr>
+            <td>Cередній чек</td>
+            {% for item in data.avg_receipt %}
+                <td>{{ item }}</td>
+            {% endfor %}
+            <td>{{ data.avg_receipt_diff_percent }}</td>
+            <td>{{ data.avg_receipt_diff }}</td>
+        </tr>
+
+    </table>
+
+{% endblock %}

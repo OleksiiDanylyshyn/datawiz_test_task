@@ -1,0 +1,99 @@
+.messages > .success{
+    color: darkgreen;
+    font-family: 'Times New Roman';
+    font-weight: 900
+}
+
+
+/* ------------------------------------------------------------------ */
+/* navbar
+/* ------------------------------------------------------------------ */
+.navbar {
+    background-color: black;
+    border-radius: 3px;
+}
+
+.navbar-right a, button {
+    color: white;
+    background-color: transparent;
+    border: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* sign-in-form
+/* ------------------------------------------------------------------ */
+
+#sign-in-form .btn-outline-success {
+    border-radius: 100px;
+}
+
+#sign-in-form button[type=submit] {
+    font-weight: bold;
+    font-size: medium;
+}
+
+/*!* ------------------------------------------------------------------ *!*/
+/*!* sign-up*/
+/*!* ------------------------------------------------------------------ *!*/
+#sign-up-form {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#sign-up-form .btn-outline-success {
+    border-radius: 100px;
+}
+
+#sign-up-form button[type=submit] {
+    margin-left: 0;
+    font-weight: bold;
+    font-size: medium;
+
+}
+
+/*!* ------------------------------------------------------------------ *!*/
+/*!* sign-up validate
+/*!* ------------------------------------------------------------------ *!*/
+#sign-up-form label.error{
+    color: red;
+    font-size: small;
+    font-family: "Times New Roman";
+}
+
+
+/*!* ------------------------------------------------------------------ *!*/
+/*!* user_profile
+/*!* ------------------------------------------------------------------ *!*/
+.table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    font-family: "Times New Roman";
+    font-size: 120%;
+
+}
+
+.table td, #companies th {
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.table tr:nth-child(even) {
+    background-color: white;
+}
+
+.table tr:hover {
+    background-color: silver;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+
+

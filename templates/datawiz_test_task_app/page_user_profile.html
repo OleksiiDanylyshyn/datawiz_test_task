@@ -1,0 +1,25 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block main %}
+    <br>
+    <h1 style="color: darkred; text-align: center; font-family: 'Times New Roman'; font-weight: 900">Client Name: {{ dw_client_info.name }}</h1>
+    <br>
+    <h1 style="color: darkred; text-align: center; font-family: 'Times New Roman'; font-weight: 900">Client Shops:</h1>
+
+    <table id="table" class="table">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+
+        {{ shop_values.name }}
+        {% for item in shops.values %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.address }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
